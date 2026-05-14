@@ -1,4 +1,4 @@
-from main import add
+from Gen_AI_FULL.Python_Basics.main import add
 from yes import subs
 
 a = int(input("Enter the 1st value :"))
