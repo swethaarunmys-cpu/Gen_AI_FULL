@@ -479,3 +479,21 @@ import string
 # 0010
 
 # 8421
+
+
+# table_1
+# 1
+# 2
+# 3
+# table_2
+# 6
+# 1
+# 2
+# select col_1, col_2 from table_1
+# join table_2 on table_1.col_1 = table_2.col_1
+
+# if col_1 in table_1
+#     a=1
+
+
+
