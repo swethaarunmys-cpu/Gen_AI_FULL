@@ -264,3 +264,35 @@
 # b = "Hello, World!"
 # print(b[-5:-2])
 
+# a = "Hello, World!"
+# print(a.lower())
+
+# a = " Hello, World! "
+# print(a.strip()) # returns "Hello, World!"
+
+# # enter the value of 3
+
+# 3
+# three
+# Three
+# THREE
+
+
+# a = "Hello, World!"
+# print(a.replace("H", "J")) #Jello, World
+
+# a = "Hello, World!"
+# print(a.split(",")) # returns ['Hello', ' World!']
+# v = vinayak@gmail.com # ["vinayak", "gmail.com"]"]
+# v = v.split("@")
+# print(v[0])
+
+a = "Hello"
+b = "World"
+c = a + b
+print(c)
+c = a + " " + b
+print(c)
+
+
+
