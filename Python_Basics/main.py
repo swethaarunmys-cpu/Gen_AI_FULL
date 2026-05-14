@@ -287,12 +287,195 @@
 # v = v.split("@")
 # print(v[0])
 
-a = "Hello"
-b = "World"
-c = a + b
-print(c)
-c = a + " " + b
-print(c)
+# a = "Hello"
+# b = "World"
+# c = a + b
+# print(c)
+# c = a + " " + b
+# print(c)
 
 
+# age = 36
+# txt = "My name is John, and I am " + str(age)
+# print(txt)
+# txt = f"My name is John, and I am {age}"
+# print(txt)
 
+# price = 59
+# txt = f"The price is {price:.2f} dollars"
+# print(txt)
+
+# txt = f"The price is {20 * 59} dollars"
+# print(txt)
+
+# txt = "Hello\nWorld!"
+# print(txt) 
+
+# txt = "Hello\tWorld!"
+# print(txt) 
+# txt = "Hello \bWorld!"
+# print(txt) 
+
+
+import string
+
+
+# capitalize()	Converts the first character to upper case
+# casefold()	Converts string into lower case
+# center()	Returns a centered string
+# count()	Returns the number of times a specified value occurs in a string
+# encode()	Returns an encoded version of the string
+# endswith()	Returns true if the string ends with the specified value
+# expandtabs()	Sets the tab size of the string
+# find()	Searches the string for a specified value and returns the position of where it was found
+# format()	Formats specified values in a string
+# format_map()	Formats specified values in a string
+# index()	Searches the string for a specified value and returns the position of where it was found
+# isalnum()	Returns True if all characters in the string are alphanumeric
+# isalpha()	Returns True if all characters in the string are in the alphabet
+# isascii()	Returns True if all characters in the string are ascii characters
+# isdecimal()	Returns True if all characters in the string are decimals
+# isdigit()	Returns True if all characters in the string are digits
+# isidentifier()	Returns True if the string is an identifier
+# islower()	Returns True if all characters in the string are lower case
+# isnumeric()	Returns True if all characters in the string are numeric
+# isprintable()	Returns True if all characters in the string are printable
+# isspace()	Returns True if all characters in the string are whitespaces
+# istitle()	Returns True if the string follows the rules of a title
+# isupper()	Returns True if all characters in the string are upper case
+# join()	Joins the elements of an iterable to the end of the string
+# ljust()	Returns a left justified version of the string
+# lower()	Converts a string into lower case
+# lstrip()	Returns a left trim version of the string
+# maketrans()	Returns a translation table to be used in translations
+# partition()	Returns a tuple where the string is parted into three parts
+# replace()	Returns a string where a specified value is replaced with a specified value
+# rfind()	Searches the string for a specified value and returns the last position of where it was found
+# rindex()	Searches the string for a specified value and returns the last position of where it was found
+# rjust()	Returns a right justified version of the string
+# rpartition()	Returns a tuple where the string is parted into three parts
+# rsplit()	Splits the string at the specified separator, and returns a list
+# rstrip()	Returns a right trim version of the string
+# split()	Splits the string at the specified separator, and returns a list
+# splitlines()	Splits the string at line breaks and returns a list
+# startswith()	Returns true if the string starts with the specified value
+# strip()	Returns a trimmed version of the string
+# swapcase()	Swaps cases, lower case becomes upper case and vice versa
+# title()	Converts the first character of each word to upper case
+# translate()	Returns a translated string
+# upper()	Converts a string into upper case
+# zfill()	Fills the string with a specified number of 0 values at the beginning
+
+
+# txt = "Hello"
+
+# print(txt.find("z"))
+
+# txt = "Hello"
+
+# print(txt.index("z"))
+
+
+# Inside the editor, complete the following steps:
+# Create a variable txt with the value "Hello, World!"
+# Print the characters from index 2 to 5 (slicing)
+# Print txt converted to upper case
+# Create a variable name with the value "Python"
+# Use an f-string to print "I love Python" using the name variable
+
+# print(10 > 9)
+# print(10 == 9)
+# print(10 < 9)
+
+# +	Addition	x + y	
+# -	Subtraction	x - y	
+# *	Multiplication	x * y	
+# /	Division	x / y	
+# %	Modulus	x % y	
+# **	Exponentiation	x ** y	
+# //	Floor division	x // y
+
+# a = 10
+# b = 3
+# print(a + b)  # Output: 13
+# print(a - b)  # Output: 7
+# print(a * b)  # Output: 30
+# print(a / b)  # Output: 3.3333333333333335
+# print(a % b)  # Output: 1
+# print(a ** b) # Output: 1000 10*10*10 5**4
+# print(a // b) # Output: 3
+
+# =	x = 5	x = 5	
+# +=	x += 3	x = x + 3	
+# -=	x -= 3	x = x - 3	
+# *=	x *= 3	x = x * 3	
+# /=	x /= 3	x = x / 3	
+# %=	x %= 3	x = x % 3	
+# //=	x //= 3	x = x // 3	
+# **=	x **= 3	x = x ** 3	
+# &=	x &= 3	x = x & 3	
+# |=	x |= 3	x = x | 3	
+# ^=	x ^= 3	x = x ^ 3	
+# >>=	x >>= 3	x = x >> 3	
+# <<=	x <<= 3	x = x << 3
+
+
+# x = 5
+# y = 5
+# x = x + 3
+# print(x)    
+# y += 3
+# print(y)
+
+# ==	Equal	x == y	
+# !=	Not equal	x != y	
+# >	Greater than	x > y	
+# <	Less than	x < y	
+# >=	Greater than or equal to	x >= y	
+# <=	Less than or equal to	x <= y
+
+# x = 5
+# y = 3
+# print(x == y)
+# print(x != y)
+
+# returns True because 5 is not equal to 3
+                                                    # T          #T     = T
+# and 	Returns True if both statements are true	2 < 5 and  5 < 10	
+# or	Returns True if one of the statements is true	x < 5 or x < 4	
+# not	Reverse the result, returns False if the result is true	not(x < 5 and x < 10)
+
+
+#  A      B      A and B    A or B    not A
+# True   True    True        True      False
+# True   False   False       True      False
+# False  True     False       True      True
+# False  False    False       False     True
+
+# x = 1                       #T         T  
+# print(x > 3 or x < 10)  # 5 > 3 and 5 < 10   
+
+
+# x = 1
+
+# print(not(x > 3 and x < 10))
+
+
+# & 	AND	Sets each bit to 1 if both bits are 1	x & y	 
+# |	OR	Sets each bit to 1 if one of two bits is 1	x | y	
+# ~	NOT	Inverts all the bits	~x	
+# <<	Zero fill left shift	Shift left by pushing zeros in from the right and let the leftmost bits fall off	x << 2	
+# >>	Signed right shift	Shift right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off	x >> 2
+
+# print(6 & 3)
+# 6 = 0000 0110  #  10245122561286342168421 #8421     0110
+# 3 = 0000 0011  #  10245122561286432168421 #8421     0011    0010  8421
+
+
+# 0000 0000
+# 0110
+# 0011
+# and
+# 0010
+
+# 8421
