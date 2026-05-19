@@ -49,10 +49,10 @@ from langchain_community.vectorstores import Neo4jVector
 from google.colab import userdata
 OPENAI_API_KEY=userdata.get('OPENAI_API_KEY')
 
-NEO4J_URI="neo4j+s://f148df90.databases.neo4j.io"
-NEO4J_USERNAME="f148df90"
-NEO4J_PASSWORD="avbCBIGCCgK3JSeYXhd33kSkMUPwWwFAUV73OqLjSjM"
-NEO4J_DATABASE="f148df90"
+NEO4J_URI=""
+NEO4J_USERNAME=""
+NEO4J_PASSWORD=""
+NEO4J_DATABASE=""
 
 os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 os.environ["NEO4J_URI"] = NEO4J_URI
