@@ -702,11 +702,147 @@ import string
 #   print("You cannot vote")
 #   print("You have limited legal rights")
 
-a = int(input("Enter first number: "))
-b = int(input("Enter second number: "))
-if b > a:
-  print("b is greater than a")
-elif a == b:
-  print("a and b are equal")
-else:  
-   print("a is greater than b")
+# a = int(input("Enter first number: "))
+# b = int(input("Enter second number: "))
+# if b > a:
+#   print("b is greater than a")
+# elif a == b:
+#   print("a and b are equal")
+# else:  
+#    print("a is greater than b")
+
+# score = 75
+
+# if score >= 90:  #75 >= 90
+#   print("Grade: A")
+# elif score >= 80: #75 >= 80
+#   print("Grade: B")
+# elif score >= 70:#75 >= 70
+#   print("Grade: C")
+# elif score >= 60:
+#   print("Grade: D")
+
+# age = -1
+
+# if age > 0 :
+#   print("You are a child")
+# elif age < 20:
+#   print("You are a teenager")
+# elif age < 65:
+#   print("You are an adult")
+# elif age >= 65 and age < 90:
+#   print("You are a senior")
+# else:
+#   print("Invalid age")
+
+
+# number = int(input("Enter a number: "))
+# if number % 2 == 0:              #5 % 2 == 0==>1 1==0 
+#   print(f"{number} is Even") 
+# else: 
+#   print(f"{number} is Odd")
+
+
+# a = 5
+# b = 2
+# if a > b:print("a is greater than b")
+
+# a = 2
+# b = 330
+# print("A") if a > b else print("B")
+
+# a = 200
+# b = 330
+# c = 500
+# if a > b and c > a:   #200 > 33 and 500 > 200
+#   print("Both conditions are True")
+# else:
+#   print("hello")
+
+
+# a = 200
+# b = 33
+# if not a > b:   #not 200 > 33
+#   print("a is NOT greater than b")
+
+# x = 15
+
+# if x > 10: #41 > 10
+#   print("Above ten,")
+#   if x > 20: #41 > 20
+#     print("and also above 20!")
+#   else:
+#     print("but not above 20.")
+# else:
+#   print("Below or equal to 10!")
+
+# x1 = 4
+# if x1 > 3:
+#   print("Above ten,")
+#   if x1 > 20: #41 > 20
+#     print("and also above 20!!!")
+#   elif x1 < 5:
+#      print("and also above 20!")
+#   else:
+#     print("but not above 20.")
+# else:
+#   print("Below or equal to 1")
+
+# i = 1
+# while i < 6: #1<6  #2<6  #3<6  #4<6  #5<6  #6<6
+#   print(i) #1  #2  #3  #4  #5
+#   i += 1 #i = i + 1 #i = 2  #i = 3  #i = 4  #i = 5  #i = 6 #i = i + 1
+# print(i)
+
+# i = 1
+# while i < 6: #1<6  #2<6  #3<6  #4<6  #5<6  #6<6
+#   print(i)  
+#   if i == 3:  #1==3 #2==3  #3==3
+#     break
+#   i += 1
+
+# i = 0
+# while i < 6:
+#     print(i)
+#     if i == 3:
+#         continue
+#     i += 1
+
+# for r in range(10001):
+#   print(r)
+
+
+# fruits = ["apple", "banana", "cherry"]
+# for x in fruits:
+#   print(x)
+
+# fruits = ["apple", "banana", "cherry"]
+# for x in fruits:
+#   print(x)
+#   if x == "banana":
+#     break
+#   break
+# print("The end of the loop")
+
+# for x in range(6):
+#     break
+#     print(x)
+
+# for x in range(2, 6):
+#   print(x)
+
+# for x in range(2, 33, 3):
+#   print(x)
+
+# for x in range(6):
+#   print(x)
+# else:
+#   print("Finally finished!")
+
+# for x in range(6):
+#   if x == 3: 
+#     continue
+#   print(x)
+# else:
+#   print("Finally finished!")
+
