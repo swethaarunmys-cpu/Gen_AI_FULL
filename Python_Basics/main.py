@@ -1094,3 +1094,159 @@ thisdict =	{
 # z = add(a,b)
 # print(y)
 # print(z)
+
+# def add(c,d):  #a = 10, b = 20
+#     e = c + d #c = 10 + 20
+#     return e #30
+
+# a = int(input("Enter first number: "))
+# b = int(input("Enter second number: "))
+# # y = add(a,b) #add(10,20)
+# print(add(a,b))
+
+
+# def my_function(fname): #fname = "Emil" #fname = "Tobias" #fname = "Linus"
+#   print(fname + " Refsnes")
+
+# my_function("Emil")
+# my_function("Tobias")
+# my_function("Linus")
+
+
+# def my_function(fname, lname):#fname = "Emil"  lname = "Refsnes"`
+#   print(fname + " " + lname)
+
+# my_function("Emil", "Refsnes")
+
+
+# def my_function(fname, lname):
+#   print(fname + " " + lname)
+
+# my_function("Emil")
+
+# def my_function(name = None): #name = "Tobias"
+#   print("Hello", name) #Hello Tobias #Hello friend
+
+
+# my_function("Tobias")
+# my_function()
+
+# def my_function(animal="Dog", name):
+#   print("I have a", animal)
+#   print("My", animal + "'s name is", name)
+
+# my_function(animal, name = "Buddy")
+
+# def my_function(name = "friend"):
+#   print("Hello", name)
+
+# my_function("Emil")
+# my_function("Tobias")
+# my_function()
+# my_function("Linus")
+
+# def adds(a,b=3):
+#     c = a + b
+#     return c
+
+# print(adds(5,3))
+
+# def adds(a=3,b):
+#     c = a + b
+#     return c
+
+# print(adds(5,3))
+
+# def my_function(fruits):
+#   for fruit in fruits:
+#     print(fruit)
+
+# my_fruits = ["apple", "banana", "cherry"]
+# my_function(my_fruits)
+
+
+# def my_function(animal, hey, age):
+#   print("I have a", age, "year old", animal, "named", hey)
+
+# names = "Buddy"
+
+# # my_function("dog", names, age = 5)
+
+# def add(c,d):
+#     return c + d
+    
+# a =3
+# b =4
+# print(add(a,b))
+
+# def add_numbers(*args): #args = (10, 20) #args = (1, 2, 3, 4, 5)``
+#     print(args) #(10, 20) #(1, 2, 3, 4, 5)
+#     print("Sum =", sum(args)) #Sum = 30 #Sum = 15
+
+# add_numbers(10, 20)
+# add_numbers(1, 2, 3, 4, 5)
+
+# def my_function(*kids):
+#   print("The youngest child is " + kids[2])
+#   print("The youngest child is ", kids)
+
+# my_function("Emil", "Tobias", "Linus")
+
+# total = 0
+# def my_function(*numbers): #numbers = (1, 2, 3) #numbers = (10, 20, 30, 40) #numbers = (5,)
+#   for num in numbers:
+#     total += num # total = total + num
+#   print("Total:", total)
+#   return total
+
+# print(my_function(1, 2, 3))
+# print(my_function(10, 20, 30, 40))
+# print(my_function(5))
+
+
+# name = "Vinayak"
+
+# def show():
+#     print(name)
+
+# show()
+
+
+
+# def student():
+#     course = "Python"
+#     print(course)
+
+# student()
+
+
+# def student():
+#     course = "Python"
+
+# student()
+# print(course)
+
+# x =100
+# def show():
+#     y = 200
+#     print("global x:", x)
+#     print(y)
+
+
+# show()
+
+# x =10
+# def test():
+#     x =20
+#     print("inside function x:", x)
+
+# test()
+# print("outside function x:", x)
+
+# count = 1
+# def update():
+#     global count
+#     count += 1
+
+# update()
+# print(count)
