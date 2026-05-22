@@ -1250,3 +1250,190 @@ thisdict =	{
 
 # update()
 # print(count)
+
+
+# name = "Vins"
+
+# def show():
+#     print(name)
+
+# show()
+
+# def show():
+#     age = 25
+#     print(age)
+
+# show()
+
+# name = "Vins"
+
+# def show():
+#     print(name)
+
+# show()
+
+# def show():
+#     age = 25
+#     print(age)
+
+# show()
+
+
+# x = 100
+
+# def test():
+#     x = 50
+#     print(x)
+
+# test()
+# print(x)
+
+# count = 10
+
+# def show():
+#     print(count)
+
+# show()
+
+# count = 10
+
+# def update():
+#     count = count + 1 #LOCAL count = LOCAL count + 1
+#     print(count)
+
+# update()
+
+# count = 10
+
+# def update():
+#     global count #GLOBAL count = GLOBAL count + 1
+#     count = count + 1
+#     print(count)
+
+# update()
+
+# print(count)
+
+# import pandas as pd 
+
+# data = {
+#     "Name": ["John", "Alice", "Bob"],
+#     "Age": [25, 30, 22],
+#     "City": ["Bangalore", "Chennai", "Hyderabad"]
+# }
+
+# df = pd.DataFrame(data)
+
+# print(df)
+
+# import pandas as pd
+# import matplotlib.pyplot as plt
+
+# data = {
+#     "Name": ["Ram", "Sam", "Priya", "John"],
+#     "Marks": [85, 92, 78, 88]
+# }
+
+# df = pd.DataFrame(data)
+
+# print(df)
+
+# # Create graph
+# plt.bar(df["Name"], df["Marks"])
+
+# # Labels
+# plt.xlabel("Students")
+# plt.ylabel("Marks")
+# plt.title("Student Marks")
+
+# # Show graph
+# plt.show()
+
+# import cowsay
+# cowsay.cow("Microdegree!")
+# try:
+#     # code that might cause an error
+# except:
+#     # code that runs if an error occurs
+
+# try:
+#     x = int(input("Enter a number: "))
+#     print(10 / x)
+# except:
+#     print("the input is not valid or division by zero is not allowed")
+
+
+# try:
+#     x = int(input("Enter a number: "))
+#     print(10 / x)
+# except ValueError:
+#     print("Invalid input! Please enter a number.")
+# except ZeroDivisionError:
+#     print("Cannot divide by zero.")
+
+# try:
+#     x = int(input("Enter a number: "))
+# except ValueError:
+#     print("Invalid input!")
+# else:
+#     print("You entered:", x)
+# finally:
+#     print("This always runs.")
+
+# try:
+#     num = int(input("Enter a number: "))
+    
+# except ValueError:
+#     print("Please enter numbers only")
+
+# else:
+#     print("You entered:", num)
+
+# finally:
+#     print("Program finished")
+
+# import cowsay
+
+# cowsay.cow("Good Mooooorning!")
+
+# import datetime
+
+# x = datetime.datetime.now()
+# print(x)
+
+# import datetime 
+
+# x = datetime.datetime.now()
+
+# print(x.year)
+# print(x.strftime("%a"))
+
+
+# %a	Weekday, short version	Wed	
+# %A	Weekday, full version	Wednesday	
+# %w	Weekday as a number 0-6, 0 is Sunday	3	
+# %d	Day of month 01-31	31	
+# %b	Month name, short version	Dec	
+# %B	Month name, full version	December	
+# %m	Month as a number 01-12	12	
+# %y	Year, short version, without century	18	
+# %Y	Year, full version	2018	
+# %H	Hour 00-23	17	
+# %I	Hour 00-12	05	
+# %p	AM/PM	PM	
+# %M	Minute 00-59	41	
+# %S	Second 00-59	08	
+# %f	Microsecond 000000-999999	548513	
+# %z	UTC offset	+0100	
+# %Z	Timezone	CST	
+# %j	Day number of year 001-366	365	
+# %U	Week number of year, Sunday as the first day of week, 00-53	52	
+# %W	Week number of year, Monday as the first day of week, 00-53	52	
+# %c	Local version of date and time	Mon Dec 31 17:41:00 2018	
+# %C	Century	20	
+# %x	Local version of date	12/31/18	
+# %X	Local version of time	17:41:00	
+# %%	A % character	%	
+# %G	ISO 8601 year	2018	
+# %u	ISO 8601 weekday (1-7)	1	
+# %V	ISO 8601 weeknumber (01-53)	01
