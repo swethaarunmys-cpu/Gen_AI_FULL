@@ -3,7 +3,7 @@ import requests
 
 app = FastAPI()
 
-API_KEY = "4fc483e4694584deee81da46cef64055"
+API_KEY = ""
 
 @app.get("/")  #datasource: https://openweathermap.org/current
 def home():
