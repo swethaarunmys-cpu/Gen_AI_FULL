@@ -1438,6 +1438,26 @@ thisdict =	{
 # %u	ISO 8601 weekday (1-7)	1	
 # %V	ISO 8601 weeknumber (01-53)	01
 
+
+# class MyClass:
+#   x = 5
+
+# print(MyClass)
+
+# p1 = MyClass()
+# print(p1.x)
+
+# class Person:
+#   def __init__(self, name, age):
+#     self.name = name
+#     self.age = age
+
+# p1 = Person("Emil", 36)
+
+# print(p1.name)
+# print(p1.age)
+
+
 # from pydantic import BaseModel
 
 # class Student(BaseModel):
@@ -1474,12 +1494,12 @@ thisdict =	{
 #     name="Rahul",
 #     age="twenty"
 # )
-
+# print(student)
 # from pydantic import BaseModel, Field
 
 # class Product(BaseModel):
 #     name: str
-#     price: float = Field(gt=0)
+#     price: float = Field(ge=50, le=100000)
 
 # product = Product(
 #     name="Laptop",

@@ -5,7 +5,7 @@ app = FastAPI()
 
 API_KEY = "4fc483e4694584deee81da46cef64055"
 
-@app.get("/")
+@app.get("/")  #datasource: https://openweathermap.org/current
 def home():
     return {"message": "Weather API Project"}
 
