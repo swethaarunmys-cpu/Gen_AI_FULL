@@ -1515,3 +1515,127 @@ thisdict =	{
 # @app.get("/")
 # def home():
 #     return {"message": "Hello Students"}
+
+
+# from dotenv import load_dotenv
+# import os
+
+# load_dotenv()
+
+# api_key = os.getenv("API_KEY")
+
+# print(api_key)
+
+#normal function
+
+# def greet():
+#     print("Hello")
+
+# greet()
+
+
+# import time
+
+# def download(file):
+#     print(f"Downloading {file}")
+#     time.sleep(3)
+#     print(f"{file} downloaded")
+
+# download("file1")
+# download("file2")
+# download("file3")
+
+# import asyncio
+
+# async def download(file):
+#     print(f"Downloading {file}")
+#     await asyncio.sleep(3)
+#     print(f"{file} downloaded")
+
+# async def main():
+#     await asyncio.gather(
+#         download("file1"),
+#         download("file2"),
+#         download("file3")
+#     )
+
+# asyncio.run(main())
+
+
+# import asyncio
+
+# async def greet():
+#     print("Hello")
+
+# asyncio.run(greet())
+
+# import asyncio
+
+# async def task():
+#     print("Starting")
+
+#     await asyncio.sleep(3)
+
+#     print("Finished")
+
+# asyncio.run(task())
+
+# import asyncio
+
+# async def task1():
+#     await asyncio.sleep(2)
+#     print("Task 1 Done")
+
+# async def task2():
+#     await asyncio.sleep(1)
+#     print("Task 2 Done")
+
+# async def main():
+#     await asyncio.gather(
+#         task1(),
+#         task2()
+#     )
+
+# asyncio.run(main())
+
+# import logging
+
+# logging.basicConfig(level=logging.INFO)
+
+# logging.info("Program started")
+# logging.warning("Low disk space")
+# logging.error("Something went wrong")
+
+# import logging
+
+
+
+# age = 15
+
+# logging.info("Checking age")
+
+# if age < 18:
+#     logging.warning("User is underage")
+# else:
+#     logging.info("User is eligible")
+
+
+# import logging
+
+# logging.basicConfig(
+#     level=logging.INFO,
+#     format="%(asctime)s - %(levelname)s - %(message)s"
+# )
+
+# logging.info("Application started")
+
+
+# import logging
+
+# logging.basicConfig(
+#     filename="app.log",
+#     level=logging.INFO
+# )
+
+# logging.info("Program started")
+# logging.error("Something failed")
