@@ -1517,12 +1517,14 @@ thisdict =	{
 #     return {"message": "Hello Students"}
 
 
+
 # from dotenv import load_dotenv
 # import os
 
 # load_dotenv()
 
 # api_key = os.getenv("API_KEY")
+# db_password = os.getenv("DB_PASSWORD")
 
 # print(api_key)
 
@@ -1583,11 +1585,11 @@ thisdict =	{
 # import asyncio
 
 # async def task1():
-#     await asyncio.sleep(2)
+#     await asyncio.sleep(5)
 #     print("Task 1 Done")
 
 # async def task2():
-#     await asyncio.sleep(1)
+#     await asyncio.sleep(4)
 #     print("Task 2 Done")
 
 # async def main():
@@ -1607,10 +1609,8 @@ thisdict =	{
 # logging.error("Something went wrong")
 
 # import logging
-
-
-
-# age = 15
+# age = 80
+# logging.basicConfig(level=logging.INFO)
 
 # logging.info("Checking age")
 
@@ -1618,6 +1618,15 @@ thisdict =	{
 #     logging.warning("User is underage")
 # else:
 #     logging.info("User is eligible")
+
+
+# import logging
+
+# logging.basicConfig(level=logging.INFO)
+
+# name = "Vins"
+# logging.info("hi")
+# logging.debug(f"Variable name contains: {name}")
 
 
 # import logging
