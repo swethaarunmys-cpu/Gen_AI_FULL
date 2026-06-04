@@ -1,0 +1,217 @@
+{
+  "name": "gmail-mail",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        -704,
+        -208
+      ],
+      "id": "70c9f665-840d-4899-8072-842f9cc7cace",
+      "name": "When chat message received",
+      "webhookId": "f78e3096-a200-49bf-82d4-d52eec2b40b5"
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "=You are an intelligent Email Assistant.\n\nYour job is to analyze incoming emails and perform the following tasks:\n\n#tools\n-use the 'get emails' tool to retrieve the emails.\n-use 'get label' tool to retrive the labels.\n-use 'add label' tool to flag an email you must use 'get emails' and 'get label' before hand so that you have the nessasary message id and label id."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        -288,
+        -208
+      ],
+      "id": "98c86479-6696-4a2e-a929-a35fe7d3231a",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-5-mini"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        -480,
+        16
+      ],
+      "id": "ecf410e0-f494-4be8-a247-88a9274c3ffe",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "Fv6e7LkY4EMbLDHN",
+          "name": "OpenAI account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.4,
+      "position": [
+        -352,
+        16
+      ],
+      "id": "b837df17-5f56-49ad-8674-06300c2c131c",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "returnAll": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Return_All', ``, 'boolean') }}",
+        "limit": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Limit', ``, 'number') }}",
+        "filters": {}
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.2,
+      "position": [
+        -224,
+        16
+      ],
+      "id": "eb6bb3bb-803a-4089-8f0f-2749d2491549",
+      "name": "get emails",
+      "webhookId": "2d94f642-a240-4571-9a45-1db4fdf6fdc7",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "gb2l7Ceny21yXhOk",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "label",
+        "returnAll": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Return_All', ``, 'boolean') }}"
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.2,
+      "position": [
+        -96,
+        16
+      ],
+      "id": "031af177-fcdf-4204-8494-767971c1c900",
+      "name": "Get label",
+      "webhookId": "fb950bb6-898c-44b3-bb13-a3fe6548a299",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "gb2l7Ceny21yXhOk",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Message_ID', ``, 'string') }}",
+        "labelIds": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Label_Names_or_IDs', ``, 'string') }}"
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.2,
+      "position": [
+        32,
+        16
+      ],
+      "id": "cb60e1bc-14f9-4a3f-beec-3c8efb1ff219",
+      "name": "label email",
+      "webhookId": "4cc68aed-759d-46e7-84bb-81a88306c1cb",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "gb2l7Ceny21yXhOk",
+          "name": "Gmail account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get emails": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get label": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "label email": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "235090a6-36ea-43f8-96c5-33c8f6c96519",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "c3cd8687a73ca2219d99522307ee92d1ad286b906a520637d0d0f7af3f7c4af2"
+  },
+  "id": "ReqJbLvrhSjpwRh7",
+  "tags": []
+}

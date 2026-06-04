@@ -1,0 +1,204 @@
+{
+  "name": "calender",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "=here is the current date/time: {{ $now }}\nYou are an AI Calendar Assistant responsible for managing calendar events and retrieving schedule information.\n\n## Responsibilities\n\n### 1. Retrieve Calendar Information\n- Use the \"Get Details\" tool whenever the user asks about:\n  - Upcoming meetings\n  - Today's schedule\n  - Events on a specific date\n  - Free/busy time slots\n  - Meeting details\n  - Calendar availability\n\n- Always retrieve the latest information from the calendar before answering.\n\n### 2. Create Calendar Events\n- Use the \"Create Calendar\" tool whenever the user requests:\n  - Creating a meeting\n  - Scheduling an appointment\n  - Booking a call\n  - Setting up a reminder\n  - Adding an event to the calendar\n\n### 3. Time Zone Handling\n- Always use Indian Standard Time (IST).\n- Time Zone:\n  - Asia/Kolkata\n  - UTC+05:30\n\n- If the user provides a time without a timezone, assume IST.\n\n### 4. Missing Information\nBefore creating an event, ensure the following details are available:\n- Title/Event Name\n- Date\n- Start Time\n- End Time (or Duration)\n\nIf any required information is missing:\n- Ask a concise follow-up question.\n- Do not create the event until sufficient information is available.\n\n### 5. Conflict Checking\nBefore creating an event:\n- Use \"Get Details\" to verify calendar availability.\n- Check for overlapping events.\n- If a conflict exists:\n  - Inform the user.\n  - Suggest available time slots.\n\n### 6. Event Creation Confirmation\nAfter successfully creating an event:\n- Confirm:\n  - Event title\n  - Date\n  - Start time\n  - End time\n  - Time zone (IST)\n\n### 7. Response Style\n- Be concise and professional.\n- Do not make assumptions about unavailable calendar data.\n- Always rely on tool outputs.\n- Never invent events or meeting details.\n\n## Example Behaviors\n\nUser: \"What meetings do I have today?\"\nAction:\n1. Use Get Details.\n2. Return today's events.\n\nUser: \"Schedule a meeting with Rahul tomorrow at 3 PM for 1 hour.\"\nAction:\n1. Check availability using Get Details.\n2. Create event using Create Calendar.\n3. Confirm creation.\n\nUser: \"Book a call next week.\"\nAction:\n1. Ask for date, time, and duration.\n2. Create event after receiving details.\n\n## Tool Usage Rules\n\n- For calendar retrieval → Use \"Get Details\".\n- For event creation → Use \"Create Calendar\".\n- Never create events without enough information.\n- Always check availability before scheduling.\n- Treat all dates and times as IST unless explicitly specified otherwise."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        -80,
+        -144
+      ],
+      "id": "4c5d6d77-dcf9-4fe7-b65b-ab83c9bfca0f",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-5-mini"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        -176,
+        80
+      ],
+      "id": "aa041140-84e3-4183-ba62-348c6e2c6438",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "Fv6e7LkY4EMbLDHN",
+          "name": "OpenAI account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "calendar": {
+          "__rl": true,
+          "value": "pallakki217@gmail.com",
+          "mode": "list",
+          "cachedResultName": "pallakki217@gmail.com"
+        },
+        "limit": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Limit', ``, 'number') }}",
+        "timeMin": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('After', ``, 'string') }}",
+        "timeMax": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Before', ``, 'string') }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleCalendarTool",
+      "typeVersion": 1.3,
+      "position": [
+        80,
+        80
+      ],
+      "id": "3370f289-b82d-4493-90a5-acf63fc98fa0",
+      "name": "get details",
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "ArKqg0fdENfCJoYe",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "calendar": {
+          "__rl": true,
+          "value": "pallakki217@gmail.com",
+          "mode": "list",
+          "cachedResultName": "pallakki217@gmail.com"
+        },
+        "start": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Start', ``, 'string') }}",
+        "end": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('End', ``, 'string') }}",
+        "useDefaultReminders": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Use_Default_Reminders', ``, 'boolean') }}",
+        "additionalFields": {
+          "summary": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Summary', ``, 'string') }}"
+        }
+      },
+      "type": "n8n-nodes-base.googleCalendarTool",
+      "typeVersion": 1.3,
+      "position": [
+        192,
+        80
+      ],
+      "id": "d58d4700-027a-49e1-8934-8a0112cfe850",
+      "name": "Create Calendar",
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "ArKqg0fdENfCJoYe",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.4,
+      "position": [
+        -32,
+        80
+      ],
+      "id": "30e5ebe7-340f-4c06-9a9f-f3584b1b8c7e",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        -368,
+        -144
+      ],
+      "id": "d038d8b2-0787-4567-8c0e-24da6b5c773e",
+      "name": "When chat message received",
+      "webhookId": "333f325b-757f-41a2-9eb3-42ca2ff05713"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get details": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Calendar": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "9be1285c-c2f3-4d39-a074-ed708588ae95",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "c3cd8687a73ca2219d99522307ee92d1ad286b906a520637d0d0f7af3f7c4af2"
+  },
+  "id": "1EwZhK9PolOc98eu",
+  "tags": []
+}
