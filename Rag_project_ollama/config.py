@@ -1,0 +1,7 @@
+COLLECTION_NAME = "hr_policy"
+EMBED_MODEL = "nomic-embed-text"
+LLM_MODEL = "llama3.2"
+QDRANT_HOST = "localhost"
+QDRANT_PORT = 6333
+CHUNK_SIZE = 500
+CHUNK_OVERLAP = 50
