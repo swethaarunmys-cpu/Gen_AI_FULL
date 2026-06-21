@@ -30,6 +30,9 @@ question=st.text_input("Ask a question about the HR Policy")
 if st.button("Ask"):
     if question:
         context=retrieve_context(question)
+        print("="*50)
+        print(context)
+        print("="*50)
         answer=generate_answer(question,context)
         st.write("### Answer")
         st.write(answer)
